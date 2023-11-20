@@ -1,4 +1,4 @@
 # easyacademy
 This is first repo
-author: rohan
-
+<br>
+author: rohan srivastava 
