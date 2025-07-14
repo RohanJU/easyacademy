@@ -4,8 +4,7 @@ import { AppContext } from "../../context/AppContext";
 import CourseCard from "./CourseCard";
 
 const CoursesSection = () => {
-
-  const {allCourses} = useContext(AppContext)
+  const { allCourses } = useContext(AppContext);
 
   return (
     <div className="py-16 md:px-40 px-8">
@@ -16,8 +15,12 @@ const CoursesSection = () => {
         "From Class 6 to 12, including JEE, NEET, and Coding — everything you
         need to succeed, all in one place."
       </p>
-      <div className="grid grid-cols-4 px-4 md:px-0 md:my-16 my-10 gap-4">
-        {allCourses.slice(0,4).map((course,index)=> <CourseCard key={index} course={course}/>)}
+      <div className="grid px-4 md:px-0 md:my-16 my-10 gap-4"
+        style={{ gridTemplateColumns: "var(--grid-cols-auto)" }}
+        >
+        {allCourses.slice(0, 4).map((course, index) => (
+          <CourseCard key={index} course={course} />
+        ))}
       </div>
 
       <Link
