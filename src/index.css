@@ -20,6 +20,10 @@
 
   --grid-cols-auto: repeat(auto-fit, minmax(200px, 1fr));
 }
+/* ✅ Custom utility class for height */
+
+ 
+
 
 * {
   font-family: "Outfit", sans-serif;

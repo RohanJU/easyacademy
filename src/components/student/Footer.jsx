@@ -13,10 +13,7 @@ const Footer = () => {
           />
           <p className="m-6 text-center md:ext-left text-sm text-white/80">
             Easy Academy is your one-stop learning platform offering
-            high-quality courses from India's top educators. Whether you're
-            preparing for school exams, competitive tests like JEE/NEET, or
-            exploring new skills like coding — we’ve got you covered. Learn at
-            your own pace, anytime, anywhere.
+            high-quality courses from India's top educators.
           </p>
         </div>
         <div className="flex flex-col md:items-start items-center w-full">
