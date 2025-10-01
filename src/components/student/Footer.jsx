@@ -3,13 +3,13 @@ import { assets } from "../../assets/assets";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 md:px-36 text-left w-full mt-10">
+    <footer className="bg-black md:px-36 text-left w-full mt-10">
       <div className="flex flex-col md:flex-row items-start px-8 md:px-0 justify-center gap-10 md:gap-32 py-10 border-b border-white-30 ">
         <div className="flex flex-col md:items-start items-center w-full">
           <img
-            className="w-20 md:w-25 h-auto self-center"
-            src={assets.logo}
-            alt="logo"
+            className="w-20 md:w-25 h-auto self-center bg-amber-50"
+            src={assets}
+            alt="EASY ACADEMY"
           />
           <p className="m-6 text-center md:ext-left text-sm text-white/80">
             Easy Academy is your one-stop learning platform offering

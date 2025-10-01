@@ -14,13 +14,16 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4 ${
-        isCourseListPage ? "bg-white" : "bg-cyan-100/70"
-      }`}
+      className="flex items-center justify-between px-4 sm:px-10 md:px-14 lg:px-36 border-b border-gray-500 py-4"
+      style={{
+        background: isCourseListPage
+          ? "white"
+          : "linear-gradient(to right, #4b6cb7, #182848)",
+      }}
     >
       <img
         onClick={() => navigate("/")}
-        src={assets.logo}
+        src={assets}
         alt="Easy-academy"
         className="w-28 lg:w-32 cursor-pointer"
       />

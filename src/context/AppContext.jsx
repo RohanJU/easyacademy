@@ -1,3 +1,4 @@
+import humanizeDuration from "humanize-duration";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { dummyCourses } from "../assets/assets";
@@ -30,6 +31,45 @@ export const AppContextProvider = (props) => {
 
     return (totalRating / course.courseRatings.length).toFixed(1);
   };
+
+  // function to calculate Course Chapter Time //
+
+  const calculateChapterTime = (chapter) => {
+    let time = 0;
+
+    chapter.chapterContent.map((lecture) => {
+      time += lecture.lectureDuration;
+    });
+
+    return humanizeDuration(time * 60 * 1000, {
+      units: ["h", "m"],
+    });
+  };
+  // function to calculate course duration //
+
+  const calculateCourseDuration = (course) => {
+    let time = 0;
+    course.courseContent.map((chapter) =>
+      chapter.chapterContent.map(
+        (leacture) => (time += leacture.leactureDuration)
+      )
+    );
+    return humanizeDuration(time * 60 * 1000, {
+      units: ["h", "m"],
+    });
+  };
+
+  // function to calculate total no of leactures in the course//
+  const calculateNoOfLeactures = (course) => {
+    let totalLeactures = 0;
+    course.courseContent.forEach((chapter) => {
+      if (Array.isArray(chapter.chapterContent)) {
+        totalLeactures += chapter.chapterContent.length;
+      }
+    });
+    return totalLeactures;
+  };
+
   useEffect(() => {
     fetchAllCourses();
   }, []);
