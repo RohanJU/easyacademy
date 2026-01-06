@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes, useMatch } from "react-router-dom";
 import Loading from "./components/student/Loading";
 import Navbar from "./components/student/Navbar";
@@ -10,7 +9,7 @@ import { StudentsEnrolled } from "./pages/educator/StudentsEnrolled";
 import CourseDetails from "./pages/student/CourseDetails";
 import CoursesList from "./pages/student/CoursesList";
 import Home from "./pages/student/Home";
-import MyEnrollements from "./pages/student/MyEnrollements";
+import MyEnrollments from "./pages/student/MyEnrollements";
 import Player from "./pages/student/Player";
 
 const App = () => {
@@ -25,7 +24,7 @@ const App = () => {
         <Route path="/course-list" element={<CoursesList />} />
         <Route path="/course-list/:input" element={<CoursesList />} />
         <Route path="/course/:id" element={<CourseDetails />} />
-        <Route path="/my-enrollments" element={<MyEnrollements />} />
+        <Route path="/my-enrollments" element={<MyEnrollments />} />
         <Route path="/player/:courseId" element={<Player />} />
         <Route path="/loading/:path" element={<Loading />} />
         <Route path="/educator" element={<Educator />}>
